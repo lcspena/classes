@@ -10,7 +10,11 @@ oPessoa:Nascimento := CTOD( "08/02/1992" )
 
 ? oPessoa:Nome
 ? oPessoa:SobreNome
-? oPessoa:Nascimento
 ? oPessoa:Signo
 
+? oPessoa:Nascimento
+
 oPessoa:Idade()
+
+oPessoa:Altura()
+oPessoa:Peso()
