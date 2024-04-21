@@ -10,28 +10,23 @@ CLASS Pessoa
   DATA Altura 
   DATA Peso
 
-  METHOD New( Nome, SobreNome, Signo )
+  METHOD New( Nome, SobreNome, Signo, Altura, Peso )
   METHOD Idade()
-  METHOD Altura(Altura)
-  METHOD Peso(Peso)
 
 ENDCLASS
 
-METHOD New( Nome, SobreNome, Signo )
+METHOD New( Nome, SobreNome, Signo, Altura, Peso )
+
 ::Nome := Nome
 ::SobreNome := SobreNome
 ::Signo := Signo
+::Altura := Altura 
+::Peso := Peso
+
 RETURN Self
 
 METHOD Idade()
-? INT( ( date() - ::Nascimento ) / 365 ), "anos"
-RETURN
 
-METHOD Altura(Altura)
-::Altura := Altura
-RETURN 
+? INT ( ( date() - ::Nascimento ) / 365 ), "anos"
 
-
-METHOD Peso(Peso)
-::Peso := Peso
 RETURN
