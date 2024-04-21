@@ -6,42 +6,32 @@ CLASS Pessoa
   DATA SobreNome
   DATA Signo
   DATA Nascimento
-
-  //DATA Altura 
-  //DATA Peso
+  DATA Idade
+  DATA Altura 
+  DATA Peso
 
   METHOD New( Nome, SobreNome, Signo )
   METHOD Idade()
-  METHOD Altura()
-  METHOD Peso()
+  METHOD Altura(Altura)
+  METHOD Peso(Peso)
 
 ENDCLASS
 
 METHOD New( Nome, SobreNome, Signo )
-
 ::Nome := Nome
 ::SobreNome := SobreNome
 ::Signo := Signo
-
 RETURN Self
 
 METHOD Idade()
-
-  ? date() - ::Nascimento, "dias" // mostra quantos dias
-  ? ( date() - ::Nascimento ) / 365, "anos" // faz a divisão dos dias pelos 365 do ano
-  ? INT( ( date() - ::Nascimento ) / 365 ), "anos" // faz o mesmo que o de cima mas imprime como int
-
+? INT( ( date() - ::Nascimento ) / 365 ), "anos"
 RETURN
 
-METHOD Altura()
-
-  ? "1.80m"
-
-RETURN
+METHOD Altura(Altura)
+::Altura := Altura
+RETURN 
 
 
-METHOD Peso()
-
-  ? "85kg"
-
+METHOD Peso(Peso)
+::Peso := Peso
 RETURN
