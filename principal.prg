@@ -5,13 +5,18 @@ function Main()
 SET DATE BRIT
 SET CENT ON
 
-oPessoa := Pessoa():New( "Lucas", "Pena", "Aquariano", "1.80m", "85kg" )
-oPessoa:Nascimento := CTOD( "08/02/1992" )
+oPessoa := Pessoa():New()
+
+ACCEPT "Qual seu nome? " TO oPessoa:Nome
+ACCEPT "Qual seu sobrenome? " TO oPessoa:SobreNome 
+ACCEPT "Qual seu signo? " TO oPessoa:Signo 
+INPUT "Qual sua altura? " TO oPessoa:Altura
+INPUT "Qual seu peso? " TO oPessoa:Peso 
+ACCEPT "Qual sua data de nascimento? " TO oPessoa:Nascimento
 
 ? oPessoa:Nome
 ? oPessoa:SobreNome
 ? oPessoa:Signo
-? oPessoa:Altura 
+? oPessoa:Altura
 ? oPessoa:Peso
 ? oPessoa:Nascimento
-? oPessoa:Idade(), "anos."
