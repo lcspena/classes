@@ -27,6 +27,4 @@ RETURN Self
 
 METHOD Idade()
 
-? INT ( ( date() - ::Nascimento ) / 365 )
-
-RETURN Self 
+RETURN INT ( ( date() - ::Nascimento ) / 365 )
